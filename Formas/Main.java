@@ -56,33 +56,29 @@ class Circle extends Shape {
 	}
 }
 
-class Rectangle extends Shape {
-	double width;
-	double length;
-
-	Rectangle(double width, double length) {
-		this.width = width;
-		this.length = length;
-	}
-
-	@Override
-	double area() {
-		return width * length;
-	}
-
-	@Override
-	public String toString() {
-		return "Shape: Rectangle Color: " + this.color + " Area: " + this.area();
-	}
-}
-
 class Triangle extends Shape {
-	double height;
 	double base;
+	double height;
+	String color;
 
-	Triangle(double height, double base) {
-		this.height = height;
+	public void setColor(String color){
+		this.color = color;
+	}
+
+	public double getBase() {
+		return base;
+	}
+
+	public void setBase(double base) {
 		this.base = base;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
 	}
 
 	@Override
@@ -92,7 +88,53 @@ class Triangle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Shape: Triangle Color: " + this.color + " Area: " + this.area();
+		return "Triangle Area is: " + area() + ", Color is: " + color + ", Position is: " + getPosition();
+	}
+
+	public void setPosition_x(Double position_x) {
+		this.position_x = position_x;
+
+	}
+
+	public void setPosition_y(Double position_y) {
+		this.position_y = 10.3;
+	}
+
+	public void setPosition_z(Double position_z) {
+		this.position_z = 4.6;
+	}
+}
+
+class Rectangle extends Shape {
+	double length;
+	double width;
+
+	public void setColor(String color){
+		this.color = color;
+	}
+
+	public double getLength() {
+		return length;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	double area() {
+		return length * width;
+	}
+
+	public String toString() {
+		return "Rectangle Area is: " + area() + ", Color is: " + getColor() + ", Position is: " + getPosition();
 	}
 }
 
@@ -108,18 +150,24 @@ public class Main {
 		System.out.println( forma2.toString2() );
 		System.out.println( forma2.getPosition() );
 
+		ejercicio1.Triangle triangle = new ejercicio1.Triangle();
+		ejercicio1.Rectangle rectangle = new ejercicio1.Rectangle();
 
-		Circle circle = new Circle(10);
-		circle.color = "RED";
+		triangle.setPosition_x(5.5);
+		triangle.setPosition_y(3.5);
+		triangle.setPosition_z(10.3);
+		triangle.setBase(5.3);
+		triangle.setHeight(7.4);
+		triangle.setColor("Blue");
 
-		Rectangle rectangle = new Rectangle(5, 15);
-		rectangle.color = "YELLOW";
+		rectangle.setPosition_x(10.3);
+		rectangle.setPosition_y(20.4);
+		rectangle.setPosition_z(5.3);
+		rectangle.setLength(3.7);
+		rectangle.setWidth(10.1);
+		rectangle.setColor("Red");
 
-		Triangle triangle = new Triangle(5, 15);
-		triangle.color = "GREEN";
-
-		System.out.println(circle);
-		System.out.println(rectangle);
 		System.out.println(triangle);
+		System.out.println(rectangle);
 	}
 }
