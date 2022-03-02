@@ -21,15 +21,26 @@ abstract class Shape {
 class Circle extends Shape {
 	double radius;
 
-	@Override double area(){					// Falta return
-		return 0.0;
+	Circle() {
+		this.radius = 0.0;
 	}
 
-	@Override public String getColor() {
+	Circle(double radius) {
+		this.radius = radius;
+	}
+
+	@Override
+	double area() {
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+
+	@Override
+	public String getColor() {
 		return "Color: " + color;
 	}
 
-	@Override public String toString(){
+	@Override
+	public String toString(){
 		return "Circle color is " + super.getColor() + " and area is : " + area();
 	}
 	public String toString2(){
@@ -126,7 +137,6 @@ class Rectangle extends Shape {
 		return "Rectangle Area is: " + area() + ", Color is: " + getColor() + ", Position is: " + getPosition();
 	}
 }
-
 
 public class Main {
 	public static void main(String args[]) {
