@@ -1,4 +1,4 @@
-package Formas;
+// Ejercicio 1
 
 abstract class Shape {
 	String color;
