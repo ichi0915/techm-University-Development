@@ -13,11 +13,11 @@ public class Gun extends Weapon{
 
     @Override
     public String getType() {
-        return null;
+        return type;
     }
 
     @Override
     public void setType(String type) {
-
+        this.type = type;
     }
 }
