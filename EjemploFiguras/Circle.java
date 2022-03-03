@@ -12,14 +12,13 @@ class Circulo extends Shape {
         return "Color: " + color;
     }
 
-    public String setColor(String colorAsignado){
+    public void setColor(String colorAsignado){
         this.color = colorAsignado;
-        return this.color;
+    
     }
 
-    public double setRadio(double radioAsignado){
+    public void setRadio(double radioAsignado){
         this.radius = radioAsignado;
-        return this.radius;
     }
 
     @Override public String toString(){

@@ -19,9 +19,9 @@ class Rectangulo extends Shape{
         return "Color: " + color;
     }
 
-    public String setColor(String colorAsignado){
+    public void setColor(String colorAsignado){
         this.color = colorAsignado;
-        return this.color;
+
     }
 
     @Override public String toString(){
