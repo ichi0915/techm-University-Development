@@ -24,7 +24,7 @@ git clone git@github.com:<your.space>/techm-university-development.git
 
 Add remote upstream
 ```bash
-git remote add upstream git@gitlab.com:ichi0915/techm-university-development.git
+git remote add upstream git@github.com:ichi0915/techm-university-development.git
 ```
 
 Create your branch from master
