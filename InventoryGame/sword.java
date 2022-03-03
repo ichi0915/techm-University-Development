@@ -23,23 +23,11 @@ public class sword extends weapon{
     }
     
     @Override
-    public double getPower() {
-        return power;
-    }
-    @Override
-    public String getType() {
-        return type;
-    }
-    @Override
     public void setPower(double power) {
         this.power = power ;
         
     }
-    @Override
-    public void setType(String type) {
-        this.type = type;
-        
-    }
+    
     @Override
     public int getAmount() {
         return amount;

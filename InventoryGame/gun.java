@@ -48,22 +48,7 @@ public class gun extends weapon{
     public int getAmountLimit(){
         return amountLimit;
     }
-    @Override
-    public void setType(String type){
-        this.type = type;
-    }
-    @Override
-    public String getType(){
-        return type;
-    }
-    @Override
-    public void setPower(double power){
-        this.power = power;
-    }
-    @Override
-    public double getPower(){
-        return power;
-    }
+    
     public String toString() {
         return "Gun[id= " + id + " name= " + name + " amount= " + amount + " amountLimit= "+ amountLimit+" type= "+type+" power= "+ power + " ammo= "+ ammoType.getAmount()+"]";
     }
