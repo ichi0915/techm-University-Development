@@ -97,14 +97,14 @@ class Triangle extends Shape {
 }
 
 public class Main {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		System.out.println("== Formas ==");
 
 		//Shape forma = new Shape();
 		Shape forma = new Circle();
 		Circle forma2 = new Circle();
-		System.out.println( forma.toString() );
+		System.out.println(forma);
 		System.out.println( forma2.toString2() );
 		System.out.println( forma2.getPosition() );
 
