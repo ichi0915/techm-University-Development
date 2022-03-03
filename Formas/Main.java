@@ -49,34 +49,43 @@ class Circle extends Shape {
 class Rectangle extends Shape {
 	double length;
 	double width;
-	public void setLength(double length){
-		this.length=length;
-	}
-	public void setWidth(double width){
-		this.width=width;
-	}
-	double area(){
-		return length*width;
-	}
-	public String toString(){
-		return "Rectangle color is " + getColor() + " and area is : " + area();
-}
-class Triangle extends Shape{
-		double base;
-		double height;
-		public void setBase(double base){
-			this.base=base;
-		}
-		public void setHeight(double height){
-			this.height=height;
-		}
-		double area(){
-			return base*height/2;
-		}
-		public String toString(){
-			return "Triangle color is " + getColor() + " and area is : " + area();
-		}
 
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	double area() {
+		return length * width;
+	}
+
+	public String toString() {
+		return "Rectangle color is " + getColor() + " and area is : " + area();
+	}
+}
+class Triangle extends Shape {
+	double base;
+	double height;
+
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	double area() {
+		return base * height / 2;
+	}
+
+	public String toString() {
+		return "Triangle color is " + getColor() + " and area is : " + area();
+	}
+}
 
 
 public class Main {
