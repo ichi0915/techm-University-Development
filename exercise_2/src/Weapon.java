@@ -1,40 +1,21 @@
 
 abstract class Weapon implements Item {
     int id;
-    String name;
+    String name = "9mm";
     int amount;
     int amountLimit;
     String type;
     double power;
 
-    @Override public String getName() {
-        return name;
-    }
+    @Override public abstract String getName();
 
-    @Override public int getId() {
-        return id;
-    }
+    @Override public abstract int getId();
 
-    @Override public int getAmount() {
-        return amount;
-    }
+    @Override public abstract int getAmount();
 
-    @Override public int getAmountLimit() {
-        return amountLimit;
-    }
+    @Override public abstract int getAmountLimit();
 
-    public String setType(){
-        return setType();
-    }
-    public String getType() {
-        return this.setType();
-    }
+   public abstract String getType();
 
-    public double setPower() {
-        return setPower();
-    }
-
-    public double getPower() {
-        return this.setPower();
-    }
+   public abstract double getPower();
 }

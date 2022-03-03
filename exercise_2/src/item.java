@@ -1,39 +1,24 @@
 
 interface Item{
-default String setName(){
-    return toString();
-}
+    abstract String setName();
 
-    default String getName(){
-        return this.setName();
-    }
+    abstract String getName();
 
-    default int setAmount() {
-        return 0;
-    }
 
-    default int getAmount(){
-        return this.setAmount();
-    }
+    abstract int setAmount();
 
-    default int getAmountLimit(){
-        return 0;
-    }
+    abstract int getAmount();
 
-    default int setAmountLimit(){
-        return getAmountLimit();
-    }
+    abstract int getAmountLimit();
 
-    int getId();
+    abstract int setAmountLimit();
+
+   abstract int getId();
 }
 
 class item {
     public static void main(String arg[]){
-        Gun gun = new Gun();
-        System.out.println(gun.getAmmoType());
 
-        Sword sword = new Sword();
-        System.out.println(sword.getHandle());
 
     }
 
