@@ -126,12 +126,20 @@ class Formas {
         //Shape forma = new Shape();
         Shape forma = new Circle();
         Circle forma2 = new Circle();
-        Mover miMovi = new Mover();
+
+        Rectangle mirec = new Rectangle();
+        Triangle mitrian = new Triangle();
+
+        Shape mirec1 = new Rectangle();
+        Shape mitrian1 = new Triangle();
 
         System.out.println( forma.toString() );
         System.out.println( forma2.toString2() );
         System.out.println( forma2.getPosition() );
-         miMovi.move(4);
+        System.out.println(mirec.area() );
+        System.out.println(mitrian.area() );
+
+
 
     }
 }
@@ -157,19 +165,5 @@ class Multiplicacion {
         System.out.println("Hola");
         System.out.println(Multiply.Multiply(2, 4));			//Metodo entero
         System.out.println(Multiply.Multiply(5.5, 6.3));		//Metodo doble
-    }
-}
-
-class Mover {
-
-    public void move(int x){
-        System.out.println("Me he movido en x");
-    }
-
-    public void move2(int y){
-        System.out.println("Me he movido en y");
-    }
-    public void move3(int z){
-        System.out.println("Me he movido en z");
     }
 }
