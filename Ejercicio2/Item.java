@@ -7,4 +7,5 @@ public interface Item {
     public Integer getAmount();
     public void setAmountLimit(Integer amountLim);
     public Integer getAmountLimit();
+    public String toString();
 }

@@ -47,4 +47,10 @@ public class Ammo implements Item{
     public Integer getAmountLimit() {
         return amountLimit;
     }
+
+    //Adding the toString method to obtain info about the ammo
+    @Override
+    public String toString(){
+        return "ammo type: "+name+", with caliber: "+caliber;
+    }
 }

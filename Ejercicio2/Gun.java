@@ -11,23 +11,9 @@ public class Gun extends Weapon{
         this.ammoType = ammoType;
     }
 
+    //Adding the toString method to obtain info about the gun
     @Override
-    public String getType() {
-        return type;
-    }
-
-    @Override
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    @Override
-    public Double getPower() {
-        return power;
-    }
-
-    @Override
-    public void setPower(Double power) {
-        this.power=power;
+    public String toString(){
+        return "Your weapon is: "+name+", type: "+type+", power range: "+power;
     }
 }

@@ -10,24 +10,10 @@ public class Sword extends Weapon{
     public void setHandle(String handle) {
         this.handle = handle;
     }
-
+    //Adding the toString method to obtain info about the sword
     @Override
-    public String getType() {
-        return type;
-    }
-
-    @Override
-    public void setType(String type) {
-        this.type=type;
-    }
-
-    @Override
-    public Double getPower() {
-        return power;
-    }
-
-    @Override
-    public void setPower(Double power) {
-        this.power=power;
+    public String toString(){
+        return "Your sword is: "+name+", type: "+type+", handler type: "+handle+
+                ", with power range: "+power;
     }
 }

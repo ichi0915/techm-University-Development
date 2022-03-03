@@ -26,10 +26,9 @@ public class Main {
 
         JOptionPane.showMessageDialog(null,
                 "You got "+(arma.getAmount()+ espada.getAmount())+
-                " weapons, "+arma.getAmount()+" guns and "+espada.getAmount()+" swords.\n"+
-                "Your weapon is: "+arma.getName()+", type: "+arma.getType()+", ammo type: "+arma.getAmmoType().getName()+
-                        " with caliber: "+arma.getAmmoType().getCaliber()+", and power range: "+arma.getPower()+".\n"+
-                "Your sword is: "+espada.getName()+", type: "+espada.getType()+", handler type: "+espada.getHandle()+
-                ", with power range: "+espada.getPower());
+                " weapons, "+arma.getAmount()+" guns and "+espada.getAmount()+" swords.\n\n"+
+                arma.toString()+", "+arma.getAmmoType().toString()+".\n"+
+                        espada.toString()
+                );
     }
 }
