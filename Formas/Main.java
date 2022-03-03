@@ -21,15 +21,26 @@ abstract class Shape {
 class Circle extends Shape {
 	double radius;
 
-	@Override double area(){					// Falta return
-		return 0.0;
+	Circle() {
+		this.radius = 0.0;
 	}
 
-	@Override public String getColor() {
+	Circle(double radius) {
+		this.radius = radius;
+	}
+
+	@Override
+	double area() {
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+
+	@Override
+	public String getColor() {
 		return "Color: " + color;
 	}
 
-	@Override public String toString(){
+	@Override
+	public String toString(){
 		return "Circle color is " + super.getColor() + " and area is : " + area();
 	}
 	public String toString2(){
@@ -45,14 +56,45 @@ class Circle extends Shape {
 	}
 }
 
-//== Implementar ==
-//Triangle
-	//Base: double
-	//Height: double
-//Rectangle
-	//length: double
-	//width: double
+class Rectangle extends Shape {
+	double width;
+	double length;
 
+	Rectangle(double width, double length) {
+		this.width = width;
+		this.length = length;
+	}
+
+	@Override
+	double area() {
+		return width * length;
+	}
+
+	@Override
+	public String toString() {
+		return "Shape: Rectangle Color: " + this.color + " Area: " + this.area();
+	}
+}
+
+class Triangle extends Shape {
+	double height;
+	double base;
+
+	Triangle(double height, double base) {
+		this.height = height;
+		this.base = base;
+	}
+
+	@Override
+	double area() {
+		return (base * height) / 2;
+	}
+
+	@Override
+	public String toString() {
+		return "Shape: Triangle Color: " + this.color + " Area: " + this.area();
+	}
+}
 
 public class Main {
 	public static void main(String args[]) {
@@ -65,5 +107,19 @@ public class Main {
 		System.out.println( forma.toString() );
 		System.out.println( forma2.toString2() );
 		System.out.println( forma2.getPosition() );
+
+
+		Circle circle = new Circle(10);
+		circle.color = "RED";
+
+		Rectangle rectangle = new Rectangle(5, 15);
+		rectangle.color = "YELLOW";
+
+		Triangle triangle = new Triangle(5, 15);
+		triangle.color = "GREEN";
+
+		System.out.println(circle);
+		System.out.println(rectangle);
+		System.out.println(triangle);
 	}
 }
