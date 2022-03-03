@@ -55,48 +55,6 @@ class Circle extends Shape {
 		// checkboxes();
 	}
 }
-
-<<<<<<< HEAD
-
-class Rectangle extends Shape {
-	double length;
-	double width;
-
-	public void setLength(double length) {
-		this.length = length;
-	}
-
-	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	double area() {
-		return length * width;
-	}
-
-	public String toString() {
-		return "Rectangle color is " + getColor() + " and area is : " + area();
-	}
-}
-class Triangle extends Shape {
-	double base;
-	double height;
-
-	public void setBase(double base) {
-		this.base = base;
-	}
-
-	public void setHeight(double height) {
-		this.height = height;
-	}
-
-	double area() {
-		return base * height / 2;
-	}
-
-	public String toString() {
-		return "Triangle color is " + getColor() + " and area is : " + area();
-=======
 class Rectangle extends Shape {
 	double width;
 	double length;
@@ -114,7 +72,6 @@ class Rectangle extends Shape {
 	@Override
 	public String toString() {
 		return "Shape: Rectangle Color: " + this.color + " Area: " + this.area();
->>>>>>> 27ff1b22952b5c754b876234e541a8d249a7a853
 	}
 }
 
