@@ -1,4 +1,14 @@
-package Formas;
+/*
+Compilar:
+	javac Main.java
+Correr:
+	java Formas
+
+rm *.class
+*/
+
+
+// abstracción
 
 abstract class Shape {
 	String color;
@@ -14,16 +24,14 @@ abstract class Shape {
 		return color;
 	}
 
-	public String getPosition() {				// Método concreto
+	public String getPosition() {					// Método concreto
 		return "x:" + position_x + " y:" + position_y + " z:" + position_z;
 	}
 }
 class Circle extends Shape {
 	double radius;
 
-	@Override double area(){					// Falta return
-		return 0.0;
-	}
+	@Override double area(){return 3.1416 * (radius * radius)}
 
 	@Override public String getColor() {
 		return "Color: " + color;
@@ -45,16 +53,26 @@ class Circle extends Shape {
 	}
 }
 
-//== Implementar ==
 //Triangle
-	//Base: double
-	//Height: double
+class Triangle extends Shape {
+	double base;
+	double height;
+
+	@Override double area(){ return base * height / 2}
+
+}
+
 //Rectangle
-	//length: double
-	//width: double
+class Rectangle extends Shape {
+	double length;
+	double height;
 
+	@Override double area(){return length * height}
 
-public class Main {
+}
+
+//public class Formas {
+class Formas {
 	public static void main(String args[]) {
 
 		System.out.println("== Formas ==");
@@ -67,3 +85,32 @@ public class Main {
 		System.out.println( forma2.getPosition() );
 	}
 }
+
+
+
+// Polimorfismo
+class Multiply {
+	static int Multiply(int a, int b){
+		System.out.println("Multiply int");
+		return a * b;						//Regresa multiplicacion de 2 enteros
+	}
+	static int Multiply(int a, int b, int c){
+		System.out.println("Multiply int");
+		return a * b * c;						//Regresa multiplicacion de 2 enteros
+	}
+	static double Multiply(double a, double b){
+		System.out.println("Multiply double");
+		return a * b;						//Regresa multiplicacion de 2 dobles
+	}
+}
+class Multiplicacion {
+	public static void main(String[] args){
+		System.out.println("Hola");
+		System.out.println(Multiply.Multiply(2, 4));			//Metodo entero
+		System.out.println(Multiply.Multiply(5.5, 6.3));		//Metodo doble
+	}
+}
+
+
+
+
