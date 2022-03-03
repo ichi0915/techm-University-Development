@@ -27,10 +27,10 @@ abstract class Shape {
     }
 }
 class Circle extends Shape {
-    double radius;
+    double radius=4.5;
 
     @Override double area(){					// Falta return
-        return 0.0;
+        return radius;
     }
 
     @Override public String getColor() {
