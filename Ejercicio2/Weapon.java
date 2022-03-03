@@ -49,13 +49,9 @@ public abstract class Weapon implements Item{
         this.amountLimit = amountLimit;
     }
 
-    public String getType() {
-        return type;
-    }
+    public abstract String getType();
 
-    public void setType(String type) {
-        this.type = type;
-    }
+    public abstract void setType(String type);
 
     public Double getPower() {
         return power;
@@ -65,5 +61,9 @@ public abstract class Weapon implements Item{
         this.power = power;
     }
 
-
+    @Override
+    public String toStirng() {
+        return "ID: " + getId() + ", Name: " + getName() + ", Amount: " + getAmount() + ", Amount Limit: " +
+                getAmountLimit() + ", Type: " + getType() + ", Power: " + getPower();
+    }
 }

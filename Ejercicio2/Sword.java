@@ -10,4 +10,14 @@ public class Sword extends Weapon{
     public void setHandle(String handle) {
         this.handle = handle;
     }
+
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public void setType(String type) {
+
+    }
 }

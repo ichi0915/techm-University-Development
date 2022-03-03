@@ -55,4 +55,10 @@ public class Ammo implements Item{
     public void setCaliber(String caliber) {
         this.caliber = caliber;
     }
+
+    @Override
+    public String toStirng() {
+        return "ID: " + getId() + ", Name: " + getName() + ", Amount: " + getAmount() + ", Amount Limit: " +
+                getAmountLimit() + ", Caliber: " + getCaliber();
+    }
 }

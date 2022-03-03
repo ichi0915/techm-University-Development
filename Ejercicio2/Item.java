@@ -9,4 +9,6 @@ public interface Item {
 
     public void setAmountLimit(int amountLimit);
     public int getAmountLimit();
+
+    public String toStirng();
 }

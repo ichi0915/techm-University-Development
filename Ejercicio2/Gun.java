@@ -10,4 +10,14 @@ public class Gun extends Weapon{
     public void setAmmoType(Ammo ammoType) {
         this.ammoType = ammoType;
     }
+
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public void setType(String type) {
+
+    }
 }
