@@ -3,8 +3,8 @@ package InventoryGame;
 import java.util.UUID;
 
 public class gun extends weapon{
-    ammo ammoType = new ammo();
-    UUID id = UUID.randomUUID();
+    private ammo ammoType = new ammo();
+    private UUID id = UUID.randomUUID();
     public gun (String name, int amount , int amountLimit , double power, String type){
         this.name = name;
         this.amount = amount;

@@ -3,7 +3,7 @@ package InventoryGame;
 import java.util.UUID;
 
 public class sword extends weapon{
-    String handle;
+    private String handle;
     UUID id = UUID.randomUUID();
 
     public sword (String name, int amount , int amountLimit ,String handle, double power, String type){
