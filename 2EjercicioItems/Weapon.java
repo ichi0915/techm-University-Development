@@ -10,13 +10,9 @@ abstract class Weapon implements Item{
     String type;
     Double power;
 
-    public void setType(String type){
-        this.type = type;
-    };
+    abstract public void setType(String type);
 
-    public String getType(){
-        return this.type;
-    }
+    abstract public String getType();
 
     public void setPower(Double power){
         this.power = power;
