@@ -1,7 +1,7 @@
 package Ejercicio_2;
 
 public class Sword extends Weapon{
-    String handle = ""; //No supe a qué se refería con este atributo, así que lo dejé en blanco
+    String handle = "";
 
     public Sword (String name, double power) {
         setName(name);
@@ -10,8 +10,8 @@ public class Sword extends Weapon{
         setPower(power);
     }
 
-    public void setHandle(String caliber) {
-
+    public void setHandle(String handle) {
+        this.handle = handle;
     }
 
     public String getHandle() {
