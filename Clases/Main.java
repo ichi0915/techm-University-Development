@@ -38,10 +38,10 @@ class AbstractaImpl extends Abstracta{
 
 //No se puede instanciar, se debe implementar todos los métodos para poder crear una instancia
 interface Interfaz{
-	public final String defaultName = "Ichi";		//The attributes are static and final
+	String defaultName = "Ichi";		//The attributes are static and final
 	//private String name;							//Illegal modifier for the interface field Interfaz.name; only public, static & final are permitted
-	public void setName(String name);
-	public String getName();
+	void setName(String name);
+	String getName();
 }
 //implementamos los métodos
 class InterfazImpl implements Interfaz{
@@ -142,7 +142,7 @@ class Anonymous {
 //Static Inner class
 // una clase estática anidada se puede instanciar sin instanciar la clase exterior
 class OuterClass2 {
-	private static String name = "Ichi Nested Static Class";
+	private static final String name = "Ichi Nested Static Class";
 
 	// Static nested class
 	public static class NestedStaticClass {
