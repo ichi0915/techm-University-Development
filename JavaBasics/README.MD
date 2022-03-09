@@ -8,7 +8,7 @@ Given the next UML Diagram, code a Program that lets you choose a Vehicle and pe
 - Accelerate the vehicle
 - Brake the vehicle
 
-[![Imgur](https://i.imgur.com/tYNXc34.png)](https://imgur.com/tYNXc34)
+[![Imgur](https://i.imgur.com/tYNXc34.png)](https://i.imgur.com/tYNXc34.png)
 
 ## Acceptance Criteria
 
