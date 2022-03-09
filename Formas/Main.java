@@ -68,7 +68,6 @@ class Triangle extends Shape {
 	public String toString() {
 		return "Shape: Triangle Color: " + this.color + " Area: " + this.area();
 	}
-
 }
 
 public class Main {
