@@ -12,8 +12,13 @@ public abstract class Weapon implements items{
 
     abstract void setType(String typeString);
     abstract String getType();
-    abstract void setPower(double power);
-    abstract double getPower();
+
+    void setPower(double power){
+        this.power = power;
+    }
+    double getPower(){
+        return power;
+    }
 
     public Weapon(String name, int amount, int amountLimit, String type, double power) {
         this.name = name;

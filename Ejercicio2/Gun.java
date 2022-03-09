@@ -24,15 +24,4 @@ public class Gun extends Weapon{
     String getType() {
         return type;
     }
-
-    @Override
-    void setPower(double power) {
-        this.power = power;
-    }
-
-    @Override
-    double getPower() {
-        return power;
-    }
-    
 }
