@@ -14,7 +14,7 @@ public class Car extends Vehicle{
 
     @Override
     public void brake() {
-
+        speed-=2;
     }
     //Not necessary
     @Override

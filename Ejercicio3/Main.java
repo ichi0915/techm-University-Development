@@ -94,18 +94,21 @@ public class Main extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 printMessage("Airplane",getValues(avion), textArea2);
+                textArea2.setText(textArea2.getText()+"\n--------------------------");
             }
         });
         btnCheckBoat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 printMessage("Boat",getValues(bote), textArea2);
+                textArea2.setText(textArea2.getText()+"\n--------------------------");
             }
         });
         btnCheckCar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 printMessage("Car",getValues(carro), textArea2);
+                textArea2.setText(textArea2.getText()+"\n--------------------------");
             }
         });
         btnAccelerateBoat.addActionListener(new ActionListener() {
@@ -220,8 +223,9 @@ public class Main extends JFrame{
                 status="without gas.";
             }
         } else {
-            if(vehicle.speed==0){
+            if(vehicle.speed==0&&vehicle.isDocked()){
                 vehicle.turnOff();
+                vehicle.setDocked(true);
                 status="off";
             }else{
                 status="with speed. Can't turn off.";
@@ -265,8 +269,8 @@ public class Main extends JFrame{
         String status;
         if(vehicle.isOn&&vehicle.gas>0&&!vehicle.isDocked()){
             vehicle.accelerate();
-            vehicle.gas-=5;
-            status=" accelerated 5 units.";
+            vehicle.gas-=4;
+            status=" accelerated 4 units.";
         }else{
             if(!vehicle.isOn){
                 status="can't accelerate bc it's off.";
@@ -282,8 +286,8 @@ public class Main extends JFrame{
         String status;
         if(vehicle.isOn&&vehicle.gas>0){
             vehicle.accelerate();
-            vehicle.gas-=5;
-            status=" accelerated 5 units.";
+            vehicle.gas-=2;
+            status=" accelerated 2 units.";
         }else{
             if(!vehicle.isOn){
                 status="can't accelerate bc it's off.";
@@ -295,7 +299,7 @@ public class Main extends JFrame{
     }
     public String landVal(Airplane vehicle){
         String status;
-        if(vehicle.isOn&&vehicle.getSpeed()==0){
+        if(vehicle.getSpeed()==0){
             vehicle.setLanded(true);
             status="landed.";
         }else{
@@ -305,7 +309,7 @@ public class Main extends JFrame{
     }
     public String dockVal(Boat vehicle){
         String status;
-        if(vehicle.isOn&&vehicle.getSpeed()==0){
+        if(vehicle.getSpeed()==0){
             vehicle.setDocked(true);
             status="docked.";
         }else{
@@ -316,8 +320,8 @@ public class Main extends JFrame{
     public String brakeVal(Vehicle vehicle, int reduce){
         String status;
         if(vehicle.isOn&&vehicle.speed!=0){
-            vehicle.speed-=reduce;
-            status="has reduced his speed 5 units";
+            vehicle.brake();
+            status="has reduced his speed "+reduce+" units";
         }else if(!vehicle.isOn){
             status="can't reduce speed bc it's off.";
         }else{
