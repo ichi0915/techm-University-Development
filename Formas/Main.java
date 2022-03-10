@@ -99,7 +99,15 @@ class Triangle extends Shape {
 public class Main {
 	public static void main(String args[]) {
 
-		System.out.println("== Formas ==");
+
+
+
+
+
+
+
+
+		/*System.out.println("== Formas ==");
 
 		//Shape forma = new Shape();
 		Shape forma = new Circle();
@@ -120,6 +128,6 @@ public class Main {
 
 		System.out.println(circle);
 		System.out.println(rectangle);
-		System.out.println(triangle);
+		System.out.println(triangle);*/
 	}
 }
