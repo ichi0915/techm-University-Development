@@ -40,19 +40,21 @@ public class Main extends JFrame{
 
         textArea1.setMinimumSize(new Dimension(300,500));
         textArea1.setMaximumSize(new Dimension(300,600));
+        textArea2.setMinimumSize(new Dimension(300,500));
+        textArea2.setMaximumSize(new Dimension(300,600));
         this.setContentPane(mainPanel);
         this.pack();
         this.setTitle("Exercise 3");
 
         Airplane avion = new Airplane();
         avion.maxGas=80;
-        avion.maxSpeed=120;
+        avion.maxSpeed=70;
         Boat bote = new Boat();
         bote.maxGas=70;
-        bote.maxSpeed=110;
+        bote.maxSpeed=60;
         Car carro = new Car();
         carro.maxGas=60;
-        carro.maxSpeed=100;
+        carro.maxSpeed=50;
         btnOnOffAirplane.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -250,13 +252,15 @@ public class Main extends JFrame{
     }
     public String accelerateVal(Airplane vehicle){
         String status;
-        if(vehicle.isOn&&vehicle.gas>0&&!vehicle.isLanded()){
+        if(vehicle.isOn&&vehicle.gas>0&&!vehicle.isLanded()&&vehicle.speed<vehicle.maxSpeed){
             vehicle.accelerate();
             vehicle.gas-=5;
             status=" accelerated 5 units.";
         }else{
             if(!vehicle.isOn){
                 status="can't accelerate bc it's off.";
+            }else if(vehicle.speed>=vehicle.maxSpeed){
+                status="can't accelerate bc you've reached the max speed.";
             }else if(vehicle.gas==0){
                 status="can't accelerate bc it's run out of gas.";
             }else{
@@ -267,13 +271,15 @@ public class Main extends JFrame{
     }
     public String accelerateVal(Boat vehicle){
         String status;
-        if(vehicle.isOn&&vehicle.gas>0&&!vehicle.isDocked()){
+        if(vehicle.isOn&&vehicle.gas>0&&!vehicle.isDocked()&&vehicle.speed<vehicle.maxSpeed){
             vehicle.accelerate();
             vehicle.gas-=4;
             status=" accelerated 4 units.";
         }else{
             if(!vehicle.isOn){
                 status="can't accelerate bc it's off.";
+            }else if(vehicle.speed>=vehicle.maxSpeed){
+                status="can't accelerate bc you've reached the max speed.";
             }else if(vehicle.gas==0){
                 status="can't accelerate bc it's run out of gas.";
             }else{
@@ -284,13 +290,15 @@ public class Main extends JFrame{
     }
     public String accelerateVal(Car vehicle){
         String status;
-        if(vehicle.isOn&&vehicle.gas>0){
+        if(vehicle.isOn&&vehicle.gas>0&&vehicle.speed<vehicle.maxSpeed){
             vehicle.accelerate();
             vehicle.gas-=2;
             status=" accelerated 2 units.";
         }else{
             if(!vehicle.isOn){
                 status="can't accelerate bc it's off.";
+            }else if(vehicle.speed>=vehicle.maxSpeed){
+                status="can't accelerate bc you've reached the max speed.";
             }else{
                 status="can't accelerate bc it's run out of gas.";
             }
