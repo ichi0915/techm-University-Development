@@ -1,7 +1,7 @@
 package JavaBasics;
 
 public class Boat extends Vehicle {
-  public boolean isDocked = true;
+  private boolean isDocked = true;
 
   public Boat(float maxGas, float maxSpeed) {
     this.maxGas = maxGas;

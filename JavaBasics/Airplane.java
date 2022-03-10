@@ -1,7 +1,7 @@
 package JavaBasics;
 
 public class Airplane extends Vehicle {
-  public boolean isLanded = true;
+  private boolean isLanded = true;
 
   public Airplane(float maxGas, float maxSpeed) {
     this.maxGas = maxGas;
