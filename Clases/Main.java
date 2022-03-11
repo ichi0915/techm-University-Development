@@ -155,6 +155,28 @@ class OuterClass2 {
 }
 
 
+interface Interfaz2{
+	public final String defaultName = "Ichi interface with default";
+
+	public String getName();
+	public void setName(String name);
+
+	default public String getDefaultName(){
+		return defaultName;
+	}
+}
+class InterfazImpl2 implements Interfaz2{
+	private String name;
+
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+}
+
+
 public class Main {
 	public static void main(String[] args){
 		System.out.println("\n== Ejemplos de los diversos tipos de clases ==");
@@ -226,5 +248,13 @@ public class Main {
 		System.out.println("\n\nNested Static Class:");
 		OuterClass2.NestedStaticClass nestedStaticClass = new OuterClass2.NestedStaticClass();
 		System.out.println( nestedStaticClass.getName() );
+
+
+		// Interface with default
+		System.out.println("\n\nInterface with default:");
+		InterfazImpl2 interfaz2 = new InterfazImpl2();
+		System.out.println( interfaz2.getDefaultName() );
+		interfaz2.setName("ichi interface InterfazImpl2");
+		System.out.println( interfaz2.getName() );
 	}
 }
