@@ -3,12 +3,12 @@ package Ejercicio2;
 import java.util.UUID;
 
 public abstract class Weapon implements items{
-    UUID id = UUID.randomUUID();
-    String name;
-    int amount;
-    int amountLimit;
-    String type;
-    double power;
+    final UUID id = UUID.randomUUID();
+    protected String name;
+    protected int amount;
+    protected int amountLimit;
+    protected String type;
+    protected double power;
 
     abstract void setType(String typeString);
     abstract String getType();
@@ -18,14 +18,6 @@ public abstract class Weapon implements items{
     }
     double getPower(){
         return power;
-    }
-
-    public Weapon(String name, int amount, int amountLimit, String type, double power) {
-        this.name = name;
-        this.amount = amount;
-        this.amountLimit = amountLimit;
-        this.type = type;
-        this.power = power;
     }
 
     @Override

@@ -1,10 +1,14 @@
 package Ejercicio2;
 
 public class Sword extends Weapon{
-    String handle;
+    private String handle;
 
     public Sword(String name, int amount, int amountLimit, String type, double power, String handle) {
-        super(name, amount, amountLimit, type, power);
+        this.name = name;
+        this.amount = amount;
+        this.amountLimit = amountLimit;
+        this.type = type;
+        this.power = power;
         this.handle = handle;
     }
 
